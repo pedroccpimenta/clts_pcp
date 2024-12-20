@@ -2,17 +2,15 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-
-
 [project]
 name = "clts_pcp"
-version = "1.0.0"
+version = "1.0.3"
 authors = [
   { name="Pedro Pimenta", email="pedroccpimenta@gmail.com" },
 ]
 description = "Collecting and listing tasks and timestamps"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.6"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -20,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/pypa/clts_pcp"
-Issues = "https://github.com/pypa/clts_pcp/issues"
+Homepage = "https://github.com/pedroccpimenta/clts_pcp"
+Issues = "https://github.com/pedroccpimenta/clts_pcp/issues"
