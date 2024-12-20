@@ -5,9 +5,16 @@ The table is gotten in both ASCII and HTML - the HTML version is prepared mainly
 
 ## Usage
 
+This module is available at [https://pypi.org/project/clts-pcp/](https://pypi.org/project/clts-pcp/).
+
+Install the last version with: 
+```
+pip install clts_pcp
+```
+
 ### Import the module
 ```
-import clts_pcp
+import clts_pcp as clts
 ```
 
 ### Set the context
@@ -68,10 +75,8 @@ toemail = clts.listtimes()
 
 and use the ```toemail``` as the body of the email.
 
+## Deprecation Notice
+
+Versions 1.2.x and earlier of this package are deprecated. Please upgrade to version 2.x.x or later for continued support and new features.
 
 PCP, December 2024
-
-
-
-
-You can use [GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/) to write your content.

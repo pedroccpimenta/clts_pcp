@@ -1,8 +1,33 @@
 import time
 
+"""
+This module provides utilities for collect and list timestamps along the execution of a script.
+
+Functions:
+- `setcontext(description)`: Sets the description of the running script.
+- `getts()`: get the current timestamp.
+- `tstart=clts.getts()`: sets the tstart timestamp for further calculations
+- `deltat(ts)`: computes time difference (watch and processor) to a given timestamp.
+- `elapt['description']=deltat(tstart)`: adds the line `description` and elapsed times to the `table`  
+- `listtimes()`: lists the actual table of times colected (ASCII)
+- `toem=listtimes()`: toem variable contains a html version of the table (to be sent through email)
+Usage:
+    import clts_pcp
+    tstart=clts_pcp.getts()
+    clts_pcp.elapt["step 1 (successful)."]=clts_pcp.deltat(tstart)
+    toem=clts_pcp.listtimes()
+"""
+
+
 elapt={}
 
 def listtimes():
+    """
+    Function: Lists a text-formatted table and returns the html version
+    Usage:
+    - listtimes() - prints the table in stdio
+    - toem=listtims() - prints the table in stdio and returns the html version
+    """
     global context
     try:
         context # does a exist in the current namespace
@@ -32,9 +57,19 @@ def listtimes():
 
 
 def getts():
+    """
+    Function: return a double timestamp (watch time and processor time)    
+    Usage:
+    - tstart = clts_pcp.getts()
+    """
     return({'tt':time.time(), 'tp':time.process_time()})
 
 def deltat(p):
+    """
+    Function: return a double timestamp difference (watch time and processor time) from a previous tstamp
+    Usage:
+    - clts.elapt["step 2 (successful)."]=clts.deltat(tstart)
+    """
     return({'tt':time.time()-p['tt'], 'tp':time.process_time()-p['tp']})
 
 def setcontext(p):
