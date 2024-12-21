@@ -25,8 +25,8 @@ def listtimes():
     """
     Function: Lists a text-formatted table and returns the html version
     Usage:
-    - listtimes() - prints the table in stdio
-    - toem=listtims() - prints the table in stdio and returns the html version
+    - clts_pcp.listtimes() - prints the table in stdio
+    - toem=clts_pcp.listtimes() - prints the table in stdio and returns the html version
     """
     global context
     try:
@@ -68,10 +68,16 @@ def deltat(p):
     """
     Function: return a double timestamp difference (watch time and processor time) from a previous tstamp
     Usage:
-    - clts.elapt["step 2 (successful)."]=clts.deltat(tstart)
+    - clts_pcp.elapt["step 2 (successful)."] = clts_pcp.deltat(tstart)
     """
     return({'tt':time.time()-p['tt'], 'tp':time.process_time()-p['tp']})
 
 def setcontext(p):
+    """
+    Function: sets the `context` (table first row)
+    Usage:
+    - clts_pcp.setcontext["free text."] = clts_pcp.deltat(tstart)
+    """
+
     global context
     context=p
